@@ -24,6 +24,8 @@ String to RichText-Widget conversion.
 - _underline_
 - \[gesture\]\(callbackName\)
 
+![image info](./richtext_from_string/assets/preview.png)
+
 
 ## Getting started
 
