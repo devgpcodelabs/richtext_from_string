@@ -1,10 +1,10 @@
 name: richtext_from_string
-description: "A new Flutter package project."
+description: "A simple converter creating a rich text widget from a string!"
 version: 0.0.1
-homepage:
+homepage: www.gpcodelabs.com
 
 environment:
-  sdk: ^3.5.0
+  sdk: ^3.0.0
   flutter: ">=1.17.0"
 
 dependencies:
