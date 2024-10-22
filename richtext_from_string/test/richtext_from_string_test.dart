@@ -48,14 +48,17 @@ void main() {
         },
       };
       RichTextConverter converter = RichTextConverter(input);
+      converter.convert(callbacks: callbacks);
 
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
             body: Column(
               children: [
-                ...converter.spans.asMap().entries.map((entry) =>
-                    RichText(key: ValueKey(entry.key), text: entry.value)),
+                ...converter.spans.asMap().entries.map(
+                      (entry) =>
+                          RichText(key: ValueKey(entry.key), text: entry.value),
+                    ),
               ],
             ),
           ),
