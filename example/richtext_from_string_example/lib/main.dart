@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RichTextConverter(
-                    "This is *italic*, **bold**, _underlined_, and [clickable](action) text.")
+                    "This is *italic*, **bold**, _underlined_, and [clickable](action) text. Even here it is **working** [right](action2)?")
                 .convert(
               callbacks: {
                 'action': () {
@@ -116,6 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) {
                         return const AlertDialog.adaptive(
                           title: Text("You clicked the text!"),
+                        );
+                      });
+                },
+                'action2': () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return const AlertDialog.adaptive(
+                          title: Text("And again!"),
                         );
                       });
                 },
