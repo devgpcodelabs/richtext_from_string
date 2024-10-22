@@ -29,16 +29,22 @@ base class RichTextConverter {
 
       if (matchText.startsWith('**')) {
         // Bold
+        matchText = matchText.replaceFirst("**", "");
+        matchText = matchText.replaceFirst("**", "");
         spans.add(TextSpan(
             text: matchText,
             style: const TextStyle(fontWeight: FontWeight.bold)));
       } else if (matchText.startsWith('*')) {
         // Italic
+        matchText = matchText.replaceFirst("*", "");
+        matchText = matchText.replaceFirst("*", "");
         spans.add(TextSpan(
             text: matchText,
             style: const TextStyle(fontStyle: FontStyle.italic)));
       } else if (matchText.startsWith('_')) {
         // Underline
+        matchText = matchText.replaceFirst("_", "");
+        matchText = matchText.replaceFirst("_", "");
         spans.add(TextSpan(
             text: matchText,
             style: const TextStyle(decoration: TextDecoration.underline)));
