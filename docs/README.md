@@ -11,7 +11,7 @@ String to RichText-Widget conversion.
 - _underline_
 - \[gesture\]\(callbackName\)
 
-<img src="./richtext_from_string/assets/preview.png" alt="drawing" width="800"/>
+<img src="preview.png" alt="drawing" width="800"/>
 
 ## Getting started
 
@@ -49,7 +49,7 @@ That's all to say for now.
 
 ## Usage
 
-Head on to [GitHub]() to have a look at the example.
+Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string) to have a look at the example.
 
 ## Additional information
 
