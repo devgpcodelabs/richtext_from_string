@@ -1,4 +1,5 @@
 # richtext_from_string
+
 A Flutter package that generates Rich-Text Widgets from Strings
 
 ## Features
@@ -10,8 +11,7 @@ String to RichText-Widget conversion.
 - _underline_
 - \[gesture\]\(callbackName\)
 
-![Shows a preview of the functionality that is available.](./richtext_from_string/assets/preview.png "Package Preview Image")
-
+<img src="./richtext_from_string/assets/preview.png" alt="drawing" width="800"/>
 
 ## Getting started
 
@@ -21,11 +21,14 @@ It is quite easy to use:
 
 RichTextConverter converter = RichTextConverter(input);
 Widget richText = converter.convert(callbacks: callbacks);
+
 ```
 
 If you want to apply your custom styles you can pass an instance of `RichTextOptions`:
 
+
 ```dart
+
 RichTextOptions options = RichTextOptions(
   boldStyle: const TextStyle(
       fontSize: 32, fontWeight: FontWeight.w900),
@@ -36,9 +39,12 @@ RichTextOptions options = RichTextOptions(
   underlineStyle: const TextStyle(
       fontSize: 24, decoration: TextDecoration.lineThrough),
 );
+
 RichTextConverter converter = RichTextConverter(input, options: options);
 Widget richText = converter.convert(callbacks: callbacks);
 ```
+
+
 That's all to say for now.
 
 ## Usage
