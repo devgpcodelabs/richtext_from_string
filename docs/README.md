@@ -44,9 +44,6 @@ RichTextConverter converter = RichTextConverter(input, options: options);
 Widget richText = converter.convert(callbacks: callbacks);
 ```
 
-
-That's all to say for now.
-
 ## Usage
 
 Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string) to have a look at the example.
