@@ -13,7 +13,8 @@ and the Flutter guide for
 
 A very simple converter using markdown like syntax to convert an annotated string
 into a RichText-Widget. The package also offers the ability to change the default styling to 
-match your custom needs.
+match your custom needs. As the styling for each annotation is completely customizable you
+can also ensure, that the annotations won't prevent you from inserting any sign.
 
 ## Features
 
@@ -24,12 +25,12 @@ String to RichText-Widget conversion.
 - _underline_
 - \[gesture\]\(callbackName\)
 
-![image info](./richtext_from_string/assets/preview.png)
+![Shows a preview of the functionality that is available.](./richtext_from_string/assets/preview.png "Package Preview Image")
 
 
 ## Getting started
 
-It is quite easy to use the converter:
+It is quite easy to use:
 
 ```dart
 
@@ -61,5 +62,5 @@ Head on to [GitHub]() to have a look at the example.
 
 ## Additional information
 
-Feel free to contribute if you like. But keep in mind to test your changes and add
-some tests.
+If it appears, that another annotation will be necessary, feel free to contribute and open up
+a pull request. But keep in mind to test your changes and write some unit tests.
