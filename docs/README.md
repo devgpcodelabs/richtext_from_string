@@ -4,7 +4,7 @@ needs. Since the styling for each annotation is fully customisable, you can also
 annotations don't prevent you from inserting characters.
 
 One very interesting use case is that you don't need to split your translations anymore. This was
-necessary if you wanted to achieve different click behaviour and different styling for some parts of
+necessary if you wanted to achieve click behaviour and different styling for some parts of
 the text. Also, languages are very different. And the order of words is different in each language,
 which can force you to rearrange your split translations in your multi-language application, which
 is quite annoying.
