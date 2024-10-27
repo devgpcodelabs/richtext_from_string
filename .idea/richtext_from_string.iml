@@ -495,6 +495,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.fvm/versions/3.24.3/packages/integration_test/integration_test_macos/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.fvm/versions/3.24.3/packages/integration_test/integration_test_macos/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/.fvm/versions/3.24.3/packages/integration_test/integration_test_macos/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.fvm" />
+      <excludeFolder url="file://$MODULE_DIR$/richtext_from_string/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/richtext_from_string/example/richtext_from_string_example/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/richtext_from_string/example/richtext_from_string_example/macos/Flutter/ephemeral" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
