@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_from_string.dart';
+import 'package:richtext_from_string/richtext_converter.dart';
 
 class PrivacyTermsCheckbox extends StatefulWidget {
   @override
@@ -30,12 +30,11 @@ class _PrivacyTermsCheckboxState extends State<PrivacyTermsCheckbox> {
                 fontWeight: FontWeight.w900,
                 decoration: TextDecoration.underline),
           ),
-        ).convert(
           callbacks: {
             "policy": () => Navigator.of(context).pushNamed("/privacy_policy"),
             "tos": () => Navigator.of(context).pushNamed("/terms_of_service"),
           },
-        ),
+        ).convert(),
         value: _isChecked,
         onChanged: (bool? value) {
           setState(() {

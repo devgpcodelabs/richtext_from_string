@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_from_string.dart';
+import 'package:richtext_from_string/richtext_converter.dart';
 import 'package:richtext_from_string_example/widgets/custom_card.dart';
 import 'package:richtext_from_string_example/widgets/privacy_checkbox.dart';
 
@@ -27,8 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: RichTextConverter(
-                      "This is *italic*, **bold**, _underlined_, and [clickable](action) text. *Even _here **it is **working** [right](action2)?")
-                  .convert(
+                "This is *italic*, **bold**, _underlined_, and [clickable](action) text. *Even _here **it is **working** [right](action2)?",
                 callbacks: {
                   'action': () {
                     showDialog(
@@ -50,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 },
-              ),
+              ).convert(),
             ),
           ),
           CustomCard(
@@ -79,7 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           CustomCard(
-              title: "Simply build a legals checkbox:", child: PrivacyTermsCheckbox()),
+              title: "Simply build a legals checkbox:",
+              child: PrivacyTermsCheckbox()),
         ],
       ),
     );

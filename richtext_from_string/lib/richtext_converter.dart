@@ -2,19 +2,26 @@ library richtext_from_string;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:richtext_from_string/richtext_options.dart';
+export 'package:richtext_from_string/richtext_options.dart';
 
 /// A Calculator.
 base class RichTextConverter {
   final List<TextSpan> spans = [];
   final String annotatedText;
   late final RichTextOptions options;
+  final Map<String, VoidCallback>? callbacks;
 
-  RichTextConverter(this.annotatedText, {RichTextOptions? options}) {
+  RichTextConverter(
+    this.annotatedText, {
+    RichTextOptions? options,
+    this.callbacks,
+  }) {
     this.options = options ?? RichTextOptions();
   }
 
   /// Converts an annotated string into a RichText widget with parsed annotations.
-  Widget convert({Map<String, VoidCallback>? callbacks, ValueKey? key}) {
+  Widget convert({ValueKey? key}) {
     final RegExp pattern =
         RegExp(r'(\*\*[^*\s][^*]*\*\*|\*[^*\s][^*]*\*|_[^_\s][^_]*_|'
             r'\[([^\]]+)\]\(([^)]+)\))');
@@ -63,8 +70,7 @@ base class RichTextConverter {
           semanticsLabel: actionKey,
           text: displayText,
           style: options.gestureStyle,
-          recognizer: TapGestureRecognizer()
-            ..onTap = callbacks != null ? callbacks[actionKey] : null,
+          recognizer: TapGestureRecognizer()..onTap = _setOnTap(actionKey),
         ));
       }
 
@@ -77,34 +83,17 @@ base class RichTextConverter {
 
     return RichText(key: key, text: TextSpan(children: spans));
   }
-}
 
-class RichTextOptions {
-  late final TextStyle boldStyle;
-  late final TextStyle italicStyle;
-  late final TextStyle underlineStyle;
-  late final TextStyle gestureStyle;
-
-  RichTextOptions({
-    TextStyle? boldStyle,
-    TextStyle? italicStyle,
-    TextStyle? underlineStyle,
-    TextStyle? gestureStyle,
-  }) {
-    this.boldStyle = boldStyle ?? _defaultBoldStyle;
-    this.italicStyle = italicStyle ?? _defaultItalicStyle;
-    this.underlineStyle = underlineStyle ?? _defaultUnderlineStyle;
-    this.gestureStyle = gestureStyle ?? _defaultGestureStyle;
+  VoidCallback? _setOnTap(String actionKey) {
+    try {
+      if (callbacks != null && callbacks!.containsKey(actionKey)) {
+        return callbacks![actionKey];
+      }
+      return null;
+    } catch (error, stackTrace) {
+      debugPrint(error.toString());
+      debugPrint(stackTrace.toString());
+      return null;
+    }
   }
-
-  TextStyle get _defaultGestureStyle => const TextStyle(color: Colors.blue);
-
-  TextStyle get _defaultUnderlineStyle =>
-      const TextStyle(decoration: TextDecoration.underline);
-
-  TextStyle get _defaultItalicStyle =>
-      const TextStyle(fontStyle: FontStyle.italic);
-
-  TextStyle get _defaultBoldStyle =>
-      const TextStyle(fontWeight: FontWeight.bold);
 }

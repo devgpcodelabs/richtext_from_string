@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_from_string.dart';
+import 'package:richtext_from_string/richtext_converter.dart';
 
 void main() {
   group("test", () {
@@ -47,8 +47,8 @@ void main() {
           callbackInvoked = true;
         },
       };
-      RichTextConverter converter = RichTextConverter(input);
-      converter.convert(callbacks: callbacks);
+      RichTextConverter converter = RichTextConverter(input, callbacks: callbacks);
+      converter.convert();
 
       await tester.pumpWidget(
         MaterialApp(
@@ -82,8 +82,8 @@ void main() {
           actionInvoked = true;
         },
       };
-      RichTextConverter converter = RichTextConverter(input);
-      Widget result = converter.convert(callbacks: callbacks);
+      RichTextConverter converter = RichTextConverter(input, callbacks: callbacks);
+      Widget result = converter.convert();
 
       await tester.pumpWidget(
         MaterialApp(
