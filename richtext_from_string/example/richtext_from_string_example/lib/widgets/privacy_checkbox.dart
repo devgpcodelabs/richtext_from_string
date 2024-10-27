@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_converter.dart';
+import 'package:richtext_from_string/richtext_from_string.dart';
 
 class PrivacyTermsCheckbox extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class _PrivacyTermsCheckboxState extends State<PrivacyTermsCheckbox> {
       constraints:
           BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.3),
       child: CheckboxListTile(
-        title: RichTextConverter(
+        title: RichTextFromString(
           text,
           options: RichTextOptions(
             gestureStyle: const TextStyle(

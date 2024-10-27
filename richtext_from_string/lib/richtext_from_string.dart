@@ -6,13 +6,13 @@ import 'package:richtext_from_string/richtext_options.dart';
 export 'package:richtext_from_string/richtext_options.dart';
 
 /// A Calculator.
-base class RichTextConverter {
+base class RichTextFromString {
   final List<TextSpan> spans = [];
   final String annotatedText;
   late final RichTextOptions options;
   final Map<String, VoidCallback>? callbacks;
 
-  RichTextConverter(
+  RichTextFromString(
     this.annotatedText, {
     RichTextOptions? options,
     this.callbacks,

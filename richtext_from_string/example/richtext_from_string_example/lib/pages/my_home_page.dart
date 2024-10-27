@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_converter.dart';
+import 'package:richtext_from_string/richtext_from_string.dart';
 import 'package:richtext_from_string_example/widgets/custom_card.dart';
 import 'package:richtext_from_string_example/widgets/privacy_checkbox.dart';
 
@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
             title: "Basic usage:",
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: RichTextConverter(
+              child: RichTextFromString(
                 "This is *italic*, **bold**, _underlined_, and [clickable](action) text. *Even _here **it is **working** [right](action2)?",
                 callbacks: {
                   'action': () {
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     """This is *italic*, **bold**, _underline as line through_, and [clickable](action) text. Even here it is **working** [right](action2)?""";
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
-                  child: RichTextConverter(
+                  child: RichTextFromString(
                     text,
                     options: RichTextOptions(
                       boldStyle: const TextStyle(

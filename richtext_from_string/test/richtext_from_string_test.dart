@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
-import 'package:richtext_from_string/richtext_converter.dart';
+import 'package:richtext_from_string/richtext_from_string.dart';
 
 void main() {
   group("test", () {
     testWidgets('Italic text parsing', (WidgetTester tester) async {
       String input = "This is an *italic* word.";
-      Widget result = RichTextConverter(input).convert();
+      Widget result = RichTextFromString(input).convert();
 
       await tester.pumpWidget(MaterialApp(home: Scaffold(body: result)));
 
@@ -17,7 +17,7 @@ void main() {
     });
     testWidgets('Bold text parsing', (WidgetTester tester) async {
       String input = "This is a **bold** word.";
-      Widget result = RichTextConverter(input).convert();
+      Widget result = RichTextFromString(input).convert();
 
       await tester.pumpWidget(MaterialApp(home: Scaffold(body: result)));
 
@@ -29,7 +29,7 @@ void main() {
 
     testWidgets('Underline text parsing', (WidgetTester tester) async {
       String input = "This is an _underlined_ word.";
-      Widget result = RichTextConverter(input).convert();
+      Widget result = RichTextFromString(input).convert();
 
       await tester.pumpWidget(MaterialApp(home: Scaffold(body: result)));
 
@@ -47,7 +47,7 @@ void main() {
           callbackInvoked = true;
         },
       };
-      RichTextConverter converter = RichTextConverter(input, callbacks: callbacks);
+      RichTextFromString converter = RichTextFromString(input, callbacks: callbacks);
       converter.convert();
 
       await tester.pumpWidget(
@@ -82,7 +82,7 @@ void main() {
           actionInvoked = true;
         },
       };
-      RichTextConverter converter = RichTextConverter(input, callbacks: callbacks);
+      RichTextFromString converter = RichTextFromString(input, callbacks: callbacks);
       Widget result = converter.convert();
 
       await tester.pumpWidget(
