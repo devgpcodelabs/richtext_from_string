@@ -26,8 +26,8 @@ It is quite easy to use:
 
 ```dart
 
-RichTextConverter converter = RichTextConverter(input);
-Widget richText = converter.convert(callbacks: callbacks);
+RichTextFromString converter = RichTextFromString(input, callbacks: callbacks);
+Widget richText = converter.convert();
 ```
 
 If you want to apply your custom styles you can pass an instance of `RichTextOptions`:
@@ -44,8 +44,8 @@ RichTextOptions options = RichTextOptions(
   underlineStyle: const TextStyle(
       fontSize: 24, decoration: TextDecoration.lineThrough),
 );
-RichTextConverter converter = RichTextConverter(input, options: options);
-Widget richText = converter.convert(callbacks: callbacks);
+RichTextFromString converter = RichTextFromString(input, options: options, callbacks: callbacks);
+Widget richText = converter.convert();
 ```
 
 ## Usage
