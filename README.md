@@ -18,7 +18,7 @@ String to RichText-Widget conversion.
 - _underline_
 - \[gesture\]\(callbackName\)
 
-![Shows a preview of the functionality that is available.](docs/preview.png "Package Preview Image")
+![Shows a preview of the functionality that is available.](./docs/preview.png "Package Preview Image")
 
 ## Getting started
 
