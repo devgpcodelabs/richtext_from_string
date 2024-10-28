@@ -50,7 +50,7 @@ Widget richText = converter.convert();
 
 ## Usage
 
-Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string) to have a look at the example.
+Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string/blob/main/richtext_from_string/example/richtext_from_string_example/lib/main.dart) to have a look at the example.
 
 ## Additional information
 
