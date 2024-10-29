@@ -28,3 +28,87 @@ doc/api/
 
 # FVM Version Cache
 .fvm/
+
+##### package
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
+/pubspec.lock
+**/doc/api/
+richtext_from_string/example/richtext_from_string_example/.dart_tool/
+richtext_from_string/example/richtext_from_string_example/.flutter-plugins
+richtext_from_string/example/richtext_from_string_example/.flutter-plugins-dependencies
+richtext_from_string/example/richtext_from_string_example/build/
+
+
+
+
+#####
+
+##### example
+
+# Miscellaneous
+richtext_from_string/example/richtext_from_string_example/*.class
+richtext_from_string/example/richtext_from_string_example/*.log
+richtext_from_string/example/richtext_from_string_example/*.pyc
+richtext_from_string/example/richtext_from_string_example/*.swp
+richtext_from_string/example/richtext_from_string_example/.DS_Store
+richtext_from_string/example/richtext_from_string_example/.atom/
+richtext_from_string/example/richtext_from_string_example/.buildlog/
+richtext_from_string/example/richtext_from_string_example/.history
+richtext_from_string/example/richtext_from_string_example/.svn/
+richtext_from_string/example/richtext_from_string_example/migrate_working_dir/
+
+# IntelliJ related
+richtext_from_string/example/richtext_from_string_example/*.iml
+richtext_from_string/example/richtext_from_string_example/*.ipr
+richtext_from_string/example/richtext_from_string_example/*.iws
+richtext_from_string/example/richtext_from_string_example/.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+richtext_from_string/example/richtext_from_string_example/**/doc/api/
+richtext_from_string/example/richtext_from_string_example/**/ios/Flutter/.last_build_id
+richtext_from_string/example/richtext_from_string_example/.pub-cache/
+richtext_from_string/example/richtext_from_string_example/.pub/
+richtext_from_string/example/richtext_from_string_example//build/
+
+# Symbolication related
+richtext_from_string/example/richtext_from_string_example/app.*.symbols
+
+# Obfuscation related
+richtext_from_string/example/richtext_from_string_example/app.*.map.json
+
+# Android Studio will place build artifacts here
+richtext_from_string/example/richtext_from_string_example/android/app/debug
+richtext_from_string/example/richtext_from_string_example/android/app/profile
+richtext_from_string/example/richtext_from_string_example/android/app/release
+
+#####
