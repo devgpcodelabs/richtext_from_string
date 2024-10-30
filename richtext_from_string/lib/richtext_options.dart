@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
 class RichTextOptions {
+  late final TextStyle basicStyle;
   late final TextStyle boldStyle;
   late final TextStyle italicStyle;
   late final TextStyle underlineStyle;
   late final TextStyle gestureStyle;
 
   RichTextOptions({
+    TextStyle? basicStyle,
     TextStyle? boldStyle,
     TextStyle? italicStyle,
     TextStyle? underlineStyle,
     TextStyle? gestureStyle,
   }) {
+    this.basicStyle = basicStyle ?? _defaultBasicStyle;
     this.boldStyle = boldStyle ?? _defaultBoldStyle;
     this.italicStyle = italicStyle ?? _defaultItalicStyle;
     this.underlineStyle = underlineStyle ?? _defaultUnderlineStyle;
@@ -28,4 +31,6 @@ class RichTextOptions {
 
   TextStyle get _defaultBoldStyle =>
       const TextStyle(fontWeight: FontWeight.bold);
+
+  TextStyle get _defaultBasicStyle => const TextStyle();
 }

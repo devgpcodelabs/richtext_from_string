@@ -26,6 +26,9 @@ class _PrivacyTermsCheckboxState extends State<PrivacyTermsCheckbox> {
         title: RichTextFromString(
           text,
           options: RichTextOptions(
+            basicStyle: const TextStyle(
+                fontWeight: FontWeight.w100,
+                decoration: TextDecoration.lineThrough),
             gestureStyle: const TextStyle(
                 fontWeight: FontWeight.w900,
                 decoration: TextDecoration.underline),

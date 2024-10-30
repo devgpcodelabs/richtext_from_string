@@ -32,7 +32,10 @@ base class RichTextFromString {
     for (final match in matches) {
       if (match.start > currentIndex) {
         spans.add(
-            TextSpan(text: annotatedText.substring(currentIndex, match.start)));
+          TextSpan(
+            text: annotatedText.substring(currentIndex, match.start),
+          ),
+        );
       }
 
       String matchText = match.group(0)!;
@@ -81,7 +84,10 @@ base class RichTextFromString {
       spans.add(TextSpan(text: annotatedText.substring(currentIndex)));
     }
 
-    return RichText(key: key, text: TextSpan(children: spans));
+    return RichText(
+      key: key,
+      text: TextSpan(children: spans, style: options.basicStyle),
+    );
   }
 
   VoidCallback? _setOnTap(String actionKey) {
