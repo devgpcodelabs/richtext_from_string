@@ -26,7 +26,7 @@ It is quite easy to use:
 
 ```dart
 
-RichTextFromString converter = RichTextFromString(input, callbacks: callbacks);
+RichTextFromString converter = RichTextFromString(input);
 Widget richText = converter.convert();
 ```
 
@@ -35,6 +35,7 @@ If you want to apply your custom styles you can pass an instance of `RichTextOpt
 ```dart
 
 RichTextOptions options = RichTextOptions(
+  basicStyle: const TextStyle(),
   boldStyle: const TextStyle(
       fontSize: 32, fontWeight: FontWeight.w900),
   italicStyle: const TextStyle(
@@ -50,7 +51,9 @@ Widget richText = converter.convert();
 
 ## Usage
 
-Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string/blob/main/richtext_from_string/example/richtext_from_string_example/lib/main.dart) to have a look at the example.
+Head on
+to [GitHub](https://github.com/devgpcodelabs/richtext_from_string/blob/main/richtext_from_string/example/richtext_from_string_example/lib/main.dart)
+to have a look at the example.
 
 ## Additional information
 
