@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+/// [RichTextOptions]
+/// Defines default styles applicable to the generated text spans.
+/// [basicStyle] defines the styling of the non-annotated text spans.
+/// [boldStyle] defines the styling of the bold-annotated text spans.
+/// [italicStyle] defines the styling of the italic-annotated text spans.
+/// [underlineStyle] defines the styling of the underline-annotated text spans.
+/// [gestureStyle] defines the styling of the gesture-annotated text spans.
 class RichTextOptions {
   late final TextStyle basicStyle;
   late final TextStyle boldStyle;

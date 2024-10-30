@@ -5,17 +5,29 @@ import 'package:flutter/gestures.dart';
 import 'package:richtext_from_string/richtext_options.dart';
 export 'package:richtext_from_string/richtext_options.dart';
 
-/// A Calculator.
+/// [RichTextFromString]
+/// Converts a string into a RichText widget containing multiple TextSpans.
+/// The [convert] function is used to convert the [annotatedText] set by the constructor. Four different annotations can be set:
+/// - **bold**
+/// - *italic*
+/// - _underline_
+/// - [gesture](callbackKey)
+///
+/// [spans] is a list of converted TextSpans created by the [convert] function.
+/// [options] allows the user to specify different styles for the
+/// annotations as well as the basic text styling of all non-annotated TextSpans.
+/// [callbacks] are used to map the onTap gesture of a TextSpan that has been annotated.
+/// with the gesture annotation.
 base class RichTextFromString {
-  final List<TextSpan> spans = [];
   final String annotatedText;
+  final List<TextSpan> spans = [];
   late final RichTextOptions options;
   final Map<String, VoidCallback>? callbacks;
 
   RichTextFromString(
     this.annotatedText, {
-    RichTextOptions? options,
     this.callbacks,
+    RichTextOptions? options,
   }) {
     this.options = options ?? RichTextOptions();
   }
