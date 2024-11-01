@@ -53,6 +53,8 @@ Widget richText = converter.convert();
 
 Head on to [GitHub](https://github.com/devgpcodelabs/richtext_from_string/blob/main/richtext_from_string/example/richtext_from_string_example/lib/main.dart) to have a look at the example.
 
+[Pub Dev:](https://pub.dev/packages/richtext_from_string)
+
 ## Additional information
 
 If it appears, that another annotation will be necessary, feel free to contribute and open up
