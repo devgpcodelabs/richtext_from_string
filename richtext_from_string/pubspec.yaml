@@ -1,6 +1,6 @@
 name: richtext_from_string
 description: "A simple converter creating a rich text widget from a string!"
-version: 1.0.0
+version: 1.0.1
 homepage: "https://www.gpcodelabs.com"
 repository: "https://github.com/devgpcodelabs/richtext_from_string"
 documentation: "https://github.com/devgpcodelabs/richtext_from_string/tree/main/docs"
