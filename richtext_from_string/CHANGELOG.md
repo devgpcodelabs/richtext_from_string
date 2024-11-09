@@ -1,3 +1,7 @@
+# 1.0.2
+
+* Improve docs.
+
 # 1.0.1
 
 * Improve RichTextOptions
