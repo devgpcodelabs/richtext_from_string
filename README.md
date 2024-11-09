@@ -4,10 +4,10 @@ needs. Since the styling for each annotation is fully customisable, you can also
 annotations don't prevent you from inserting characters.
 
 One very interesting use case is that you don't need to split your translations anymore. This was
-necessary if you wanted to achieve click behaviour and different styling for some parts of
+necessary if you wanted to have different click behaviour and different styling for some parts of
 the text. Also, languages are very different. And the order of words is different in each language,
-which can force you to rearrange your split translations in your multi-language application, which
-is quite annoying.
+which can force you to rearrange your split translations in your multilingual application, which is
+quite annoying.
 
 ## Features
 
@@ -29,6 +29,7 @@ It is quite easy to use:
 RichTextFromString converter = RichTextFromString(input);
 Widget richText = converter.convert();
 ```
+## Usage
 
 If you want to apply your custom styles you can pass an instance of `RichTextOptions`:
 
@@ -45,11 +46,26 @@ RichTextOptions options = RichTextOptions(
   underlineStyle: const TextStyle(
       fontSize: 24, decoration: TextDecoration.lineThrough),
 );
-RichTextFromString converter = RichTextFromString(input, options: options, callbacks: callbacks);
+
+RichTextFromString converter = RichTextFromString(input, options: options);
 Widget richText = converter.convert();
 ```
 
-## Usage
+Or if you just want to use custom interactions:
+
+```dart
+/// Define callbacks to be invoked when a clickable text is tapped.
+/// An example of gesture annotated text might be:
+/// "Click [here](actionName) to print!",
+/// where [actionName] is the key defined in the callbacks.
+
+Map<String, dynamic> callbacks = {
+  "actionName": () => print("Hey, you tapped that text!"),
+};
+
+RichTextFromString converter = RichTextFromString(input, callbacks: callbacks);
+Widget richText = converter.convert();
+```
 
 Head on
 to [GitHub](https://github.com/devgpcodelabs/richtext_from_string/blob/main/richtext_from_string/example/richtext_from_string_example/lib/main.dart)
